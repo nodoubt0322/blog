@@ -9,6 +9,8 @@ description: vitepress的markdown插件支持的语法，一直想找一个干�
 
 # 一直想找一个系统架构和设计都足够干净的系统
 
+![abc](./images/1.jpeg)
+
 ## 前提
 
 理论上任何工具写出来的 markdown(下文简称 md)文件都能用，但是如果是按照以下方式写的话，可能表现力会丰富很多

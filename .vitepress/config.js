@@ -5,7 +5,7 @@ async function config() {
     await generatePaginationPages(pageSize)
     return {
         title: '學習隨記',
-        base:'/',
+        base:'/blog',
         description: 'vitepress,blog',
         themeConfig: {
             posts: await getPosts(),

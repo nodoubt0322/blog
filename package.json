@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "vitepress dev --host 0.0.0.0",
         "build": "vitepress build",
-        "serve": "vitepress serve --port 8080"
+        "deploy": "./deploy.sh"
     },
     "keywords": [],
     "author": "",
