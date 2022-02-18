@@ -1,4 +1,4 @@
-npm run build
+vitepress build
 cd .vitepress/dist 
 git add -A
 git commit -m 'deploy'
