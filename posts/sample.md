@@ -9,7 +9,7 @@ description: vitepress的markdown插件支持的语法，一直想找一个干�
 
 # 一直想找一个系统架构和设计都足够干净的系统
 
-![abc](./images/1.jpeg)
+![github page](./images/github_page.png)
 
 ## 前提
 
