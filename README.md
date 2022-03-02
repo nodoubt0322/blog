@@ -28,7 +28,7 @@ git push -f https://github.com/nodoubt0322/blog master:gh-pages
 cd -
 ```
 
-![github page](./images/github_page.png)
+![github page](./posts/images/github_page.png)
 
 ```js
 npm run deply  // deploy to github page
