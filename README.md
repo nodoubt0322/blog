@@ -17,7 +17,7 @@ npm run dev // run dev server
 -   edit /deploy.sh
 -   replace https://github.com/nodoubt0322/blog to `your github page repository url`
 -   change the repository settings to serve github page (see picture below)
--   npm run deploy // deploy to github page
+-   npm run deploy (deploy to github page)
 
 ```sh
 vitepress build
