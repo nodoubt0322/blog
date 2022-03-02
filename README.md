@@ -7,7 +7,8 @@
 ## develop
 
 ```js
-npm run dev // run dev server
+npm run dev     // run dev server
+npm run deploy  // deploy to github page
 ```
 
 -   write markdown file in posts folder (check the sample.md in the folder)
