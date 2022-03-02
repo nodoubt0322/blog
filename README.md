@@ -15,7 +15,7 @@ npm run dev // run dev server
 ## deploy
 
 -   edit /deploy.sh
--   replace https://github.com/nodoubt0322/blog to github page repository url
+-   replace https://github.com/nodoubt0322/blog to `your github page repository url`
 -   change the repository settings to serve github page (see picture below)
 
 ```sh
