@@ -11,7 +11,7 @@ npm run dev     // run dev server
 npm run deploy  // deploy to github page
 ```
 
--   write markdown file in posts folder (check the sample.md in the folder)
+-   write markdown file in posts folder (md format check the sample.md)
 
 ## deploy
 
@@ -23,7 +23,7 @@ npm run deploy  // deploy to github page
 ```sh
 vitepress build
 cd .vitepress/dist
-git init -y
+git init
 git add -A
 git commit -m 'deploy'
 git push -f https://github.com/nodoubt0322/blog master:gh-pages
