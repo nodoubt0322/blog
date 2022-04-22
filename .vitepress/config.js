@@ -23,7 +23,10 @@ async function config() {
                 { text: 'About', link: '/pages/about' }
             ]
         },
-        srcExclude: ['README.md']
+        srcExclude: ['README.md'],
+        plugins: [
+            [ '@vuepress/google-analytics', { 'ga': 'G-HZEGH828MB'} ]
+        ]        
     }
 }
 
