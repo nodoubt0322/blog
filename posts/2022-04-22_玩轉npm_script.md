@@ -5,7 +5,7 @@ tags:
     - 前端
     - 前端工程化
     - npm
-description: npm run實際上就是npm run-script的alias，當你執行npm run，他會列出package.json檔案在scripts裡面的所有指令...
+description: npm run實際上就是npm run-script的alias，當你執行npm run，他會列出package.json檔案在scripts裡面的所有指令。npm run test會執行scripts裡面的test指令，因為test是npm run-script內建的指令之一，所以可以縮寫成npm test，甚至是npm t(npm test的alias)，不是內建指令就必須把run乖乖的打出來，像npm run echo...
 ---
 
 # 玩轉npm script
