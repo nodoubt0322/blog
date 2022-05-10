@@ -14,7 +14,7 @@
     </a>
 </template>
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { useData,withBase } from 'vitepress'
 import { initTags } from '../functions'
 
@@ -24,6 +24,12 @@ let selectTag = ref('')
 const toggleTag = (tag: string) => {
     selectTag.value = tag
 }
+onMounted(()=>{
+    const firstKey = Object.keys(data.value)[0];
+    toggleTag(firstKey)
+})
+
+
 </script>
 
 <style scoped>

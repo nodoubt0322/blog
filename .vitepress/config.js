@@ -7,13 +7,15 @@ async function config() {
         title: '學習隨記',
         base:'/blog',
         description: 'vitepress,blog',
+        head:[
+            ['link', { rel: "icon", href: "/blog/favicon.ico"}]
+        ],
         themeConfig: {
             posts: await getPosts(),
             pageSize: pageSize,
             website: 'https://github.com/nodoubt0322/blog',
             comment: {
                 repo: 'nodoubt0322/blog',
-                themes: 'github-light',
                 issueTerm: 'pathname'
             },
             nav: [
