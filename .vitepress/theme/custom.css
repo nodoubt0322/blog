@@ -266,3 +266,7 @@ body.dark h2 {
 body.dark h3 {
     color: #8ebc6e
 }
+
+body.dark .vitepress {
+    color: #3eaf7c
+}
