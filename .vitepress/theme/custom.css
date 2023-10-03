@@ -244,11 +244,13 @@ body.dark .describe {
 }
 
 body.dark .tag {
-    color: #cf9999
+    color: #35A69B;
+    border: 1px solid #35A69B;
+    background-color: transparent;
 }
 
 body.dark .tag strong {
-    color: #cf9999
+    color: #5AA1C3;
 }
 
 body.dark code {

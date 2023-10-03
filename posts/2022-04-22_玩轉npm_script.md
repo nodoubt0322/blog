@@ -28,7 +28,7 @@ package.json
 
 在terminal輸入`echo $PATH & npm run echo`，他會印出PATH的環境變量跟在npm run-script裡面的環境變量，如圖
 
-![環境變量](./images/2022-04-22/01.png)
+![環境變量](../images/2022-04-22/01.png)
 
 你會發現多了好幾個xxx/xxx/node_modules/.bin的東西，這些環境變量就是在執行npm run-script的時候加上去的，執行完之後又移除。觀察他的規則，就是當下的目錄找不到該modules的bin就往`上一層目錄`找，直到`根目錄`，就也是nodejs引用modules的規則底層機制。
 
@@ -36,7 +36,7 @@ package.json
 
 輸入`npm i eslint`安裝eslint，安裝完之後，會發現在`./node_modules/.bin`多了幾個檔案，用`ls -alh`去看一下他的狀態，發現eslint他是一個`link`，指向`./node_modules/eslint/bin/eslint.js`的檔案。可以歸納出，安裝package的時候，會在/node_modules/.bin裡面生成相對應的link，該link會指向該package的`入口js檔案`，然後在執行npm run-script的時候，因為inject了.bin的環境變量，所以可以在npm run-script裡面直接使用該package。
 
-![link](./images/2022-04-22/02.jpg)
+![link](../images/2022-04-22/02.jpg)
 
 ```json
 "scripts": {
