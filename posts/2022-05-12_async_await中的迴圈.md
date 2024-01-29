@@ -1,13 +1,13 @@
 ---
 date: 2022-05-12
-title: 迴圈中的async/await
+title: 迴圈中的 async/await
 tags:
     - 前端
     - javascript
 description: async/await在迴圈中的行為，附上結果圖示...
 ---
 
-# async/await 中的迴圈
+# 迴圈中的 async/await
 
 ## 結論
 

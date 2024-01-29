@@ -5,8 +5,9 @@
     "main": "index.js",
     "scripts": {
         "dev": "vitepress dev --host 0.0.0.0",
-        "deploy": "./deploy.sh",
-        "build": "vitepress build"
+        "deploy": "./deploy.sh && npm run preview",
+        "build": "vitepress build",
+        "preview": "open https://nodoubt0322.github.io/blog/"
     },
     "keywords": [],
     "author": "",
