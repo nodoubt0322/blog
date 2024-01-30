@@ -5,11 +5,9 @@ async function config() {
     await generatePaginationPages(pageSize)
     return {
         title: '學習隨記',
-        base:'/blog',
+        base: '/',
         description: 'vitepress,blog',
-        head:[
-            ['link', { rel: "icon", href: "/blog/favicon.ico"}]
-        ],
+        head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
         themeConfig: {
             posts: await getPosts(),
             pageSize: pageSize,
@@ -26,9 +24,7 @@ async function config() {
             ]
         },
         srcExclude: ['README.md'],
-        plugins: [
-            [ '@vuepress/google-analytics', { 'ga': 'G-HZEGH828MB'} ]
-        ]        
+        plugins: [['@vuepress/google-analytics', { ga: 'G-HZEGH828MB' }]]
     }
 }
 
