@@ -2,7 +2,7 @@
 
 ## Preview
 
--   [https://nodoubt0322.github.io/blog/](https://nodoubt0322.github.io/blog/)
+-   [https://blog-nodoubt0322.vercel.app/](https://blog-nodoubt0322.vercel.app/)
 
 ## develop
 
