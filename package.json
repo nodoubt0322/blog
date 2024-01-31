@@ -30,7 +30,6 @@
         "vitepress": "^0.20.4"
     },
     "dependencies": {
-        "@vercel/speed-insights": "^1.0.9",
         "@vuepress/plugin-google-analytics": "^1.9.7"
     }
 }
