@@ -9,7 +9,7 @@ async function config() {
         description: 'vitepress,blog',
         head: [
             [
-                ['link', { rel: 'icon', href: '/favicon.ico' },
+                ['link', { rel: 'icon', href: '/favicon.ico' }],
                 ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-HZEGH828MB' }],
                 [
                     'script',
