@@ -8,14 +8,12 @@ async function config() {
         base: '/',
         description: 'vitepress,blog',
         head: [
+            ['link', { rel: 'icon', href: '/favicon.ico' }],
+            ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-HZEGH828MB' }],
             [
-                ['link', { rel: 'icon', href: '/favicon.ico' }],
-                ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-HZEGH828MB' }],
-                [
-                    'script',
-                    {},
-                    "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-HZEGH828MB');"
-                ]
+                'script',
+                {},
+                "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-HZEGH828MB');"
             ]
         ],
         themeConfig: {
