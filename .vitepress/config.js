@@ -7,7 +7,20 @@ async function config() {
         title: '學習隨記',
         base: '/',
         description: 'vitepress,blog',
-        head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+        head: [
+            ['link', { rel: 'icon', href: '/favicon.ico' }],
+            [
+                ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-HZEGH828MB' }],
+                [
+                    'script',
+                    {},
+                    `window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-HZEGH828MB');`
+                ]
+            ]
+        ],
         themeConfig: {
             posts: await getPosts(),
             pageSize: pageSize,
@@ -23,8 +36,7 @@ async function config() {
                 { text: 'About', link: '/pages/about' }
             ]
         },
-        srcExclude: ['README.md'],
-        plugins: [['@vuepress/google-analytics', { ga: 'G-HZEGH828MB' }]]
+        srcExclude: ['README.md']
     }
 }
 
