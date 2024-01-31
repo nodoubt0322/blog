@@ -1,13 +1,14 @@
 <template>
     <div class="site-footer">
-        MIT Licensed | Copyright © 2022 <a class="vitepress" >nodoubt0322</a
-        ><br />
+        MIT Licensed | Copyright © 2022 <a class="vitepress">nodoubt0322</a><br />
         Powered by
         <a class="vitepress" target="_blank" href="//vitepress.vuejs.org/">VitePress</a>
+        <SpeedInsights />
     </div>
 </template>
 <script lang="ts" setup>
 import { useData } from 'vitepress'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const { site, theme } = useData()
 const website = theme.value.website
