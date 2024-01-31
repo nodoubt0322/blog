@@ -14,10 +14,7 @@ async function config() {
                 [
                     'script',
                     {},
-                    `window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-HZEGH828MB');`
+                    "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-HZEGH828MB');"
                 ]
             ]
         ],
