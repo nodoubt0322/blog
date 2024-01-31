@@ -8,7 +8,7 @@
 </template>
 <script lang="ts" setup>
 import { useData } from 'vitepress'
-import { SpeedInsights } from '@vercel/speed-insights/next'
+import { SpeedInsights } from '@vercel/speed-insights/vue'
 
 const { site, theme } = useData()
 const website = theme.value.website
