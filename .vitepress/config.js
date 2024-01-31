@@ -11,7 +11,7 @@ async function config() {
         themeConfig: {
             posts: await getPosts(),
             pageSize: pageSize,
-            website: 'https://github.com/nodoubt0322/blog',
+            website: 'https://blog-nodoubt0322.vercel.app/',
             comment: {
                 repo: 'nodoubt0322/blog',
                 issueTerm: 'pathname'
