@@ -7,6 +7,9 @@ import Page from './components/Page.vue'
 import Comment from './components/Comment.vue'
 
 import './custom.css'
+import { inject } from '@vercel/analytics'
+
+inject()
 
 export default {
     ...DefaultTheme,
