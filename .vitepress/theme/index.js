@@ -8,7 +8,9 @@ import Comment from './components/Comment.vue'
 
 import './custom.css'
 import { inject } from '@vercel/analytics'
+import { injectSpeedInsights } from '@vercel/speed-insights'
 
+injectSpeedInsights()
 inject()
 
 export default {
