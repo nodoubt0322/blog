@@ -86,7 +86,7 @@ h3 {
 /*mobile*/
 @media screen and (max-width: 720px) {
     .sidebar-button {
-        left:0.5rem
+        left: 0.5rem;
     }
     .page {
         min-height: calc(100vh - 3rem);
@@ -155,8 +155,6 @@ body.dark .nav-bar {
     border-bottom: none;
 }
 
-
-
 body.dark {
     --c-divider: #666;
     --c-divider-light: #333;
@@ -180,14 +178,14 @@ body.dark {
     --c-text-dark-3: #445666;
     --c-brand: #3eaf7c;
     --c-brand-light: #4abf8a;
-    --date-color: #FFF;
+    --date-color: #fff;
     --title-color: #3eaf7c;
     --tag-bg: #fff;
 
     --docsearch-searchbox-focus-background: #242424;
     --docsearch-container-background: rgba(101, 108, 133, 0.8);
     --docsearch-modal-background: #242424;
-    --docsearch-modal-shadow: inset 1px 1px 0 0 hsla(0, 0%, 100%, 0.5),0 3px 8px 0 #555a64;
+    --docsearch-modal-shadow: inset 1px 1px 0 0 hsla(0, 0%, 100%, 0.5), 0 3px 8px 0 #555a64;
     --docsearch-searchbox-background: #ebedf0;
     --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-primary-color);
     --docsearch-hit-color: #444950;
@@ -195,9 +193,9 @@ body.dark {
     --docsearch-hit-background: #333;
     --docsearch-hit-shadow: 0 1px 3px 0 #d4d9e1;
     --docsearch-key-gradient: linear-gradient(-225deg, #d5dbe4, #f8f8f8);
-    --docsearch-key-shadow: inset 0 -2px 0 0 #cdcde6, inset 0 0 1px 1px #333,0 1px 2px 1px rgba(30, 35, 90, 0.4);
+    --docsearch-key-shadow: inset 0 -2px 0 0 #cdcde6, inset 0 0 1px 1px #333, 0 1px 2px 1px rgba(30, 35, 90, 0.4);
     --docsearch-footer-background: #333;
-    --docsearch-footer-shadow: 0 -1px 0 0 #e0e3e8,0 -3px 6px 0 rgba(69, 98, 155, 0.12); 
+    --docsearch-footer-shadow: 0 -1px 0 0 #e0e3e8, 0 -3px 6px 0 rgba(69, 98, 155, 0.12);
 }
 
 body.dark tr:nth-child(2n) {
@@ -244,17 +242,21 @@ body.dark .describe {
 }
 
 body.dark .tag {
-    color: #35A69B;
-    border: 1px solid #35A69B;
+    color: #35a69b;
+    border: 1px solid #35a69b;
     background-color: transparent;
 }
 
+body.dark .token.tag {
+    border: none;
+}
+
 body.dark .tag strong {
-    color: #5AA1C3;
+    color: #5aa1c3;
 }
 
 body.dark code {
-    color: #cf9999
+    color: #cf9999;
 }
 
 body.dark iframe .text-link {
@@ -262,13 +264,17 @@ body.dark iframe .text-link {
 }
 
 body.dark h2 {
-    color: #bcb137
+    color: #bcb137;
 }
 
 body.dark h3 {
-    color: #8ebc6e
+    color: #8ebc6e;
+}
+
+body.dark h4 {
+    color: #3eaf7c;
 }
 
 body.dark .vitepress {
-    color: #3eaf7c
+    color: #3eaf7c;
 }

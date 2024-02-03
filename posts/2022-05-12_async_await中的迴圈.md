@@ -3,7 +3,7 @@ date: 2022-05-12
 title: 迴圈中的 async/await
 tags:
     - 前端
-    - javascript
+    - Javascript
 description: async/await在迴圈中的行為，附上結果圖示...
 ---
 
