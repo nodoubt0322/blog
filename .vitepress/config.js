@@ -1,4 +1,9 @@
 const { getPosts, generatePaginationPages } = require('./theme/serverUtils')
+import { inject } from '@vercel/analytics'
+import { injectSpeedInsights } from '@vercel/speed-insights'
+
+injectSpeedInsights()
+inject()
 
 async function config() {
     const pageSize = 6
