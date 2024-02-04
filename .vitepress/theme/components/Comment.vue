@@ -3,10 +3,10 @@ import { onMounted, ref } from 'vue'
 import { useData } from 'vitepress'
 const { theme } = useData()
 const { repo, issueTerm = 'pathname' } = theme.value.comment
-const themes = document.body.classList.contains('dark') ? 'github-dark' : 'github-light'
 const utterancesRef = ref()
 onMounted(() => {
-    if (repo) {
+    if (repo && typeof window !== 'undefined') {
+        const themes = document.body.classList.contains('dark') ? 'github-dark' : 'github-light'
         let utterances = document.createElement('script')
         utterances.async = true
         utterances.setAttribute('src', 'https://utteranc.es/client.js')
