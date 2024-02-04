@@ -2,7 +2,7 @@
 date: 2024-02-03
 title: React條件渲染的最佳實踐?
 tags:
-    - 前端
+    - Frontend
     - Javascript
     - React
 description: React的條件渲染寫得好不好，代碼的易讀性真的差非常多，React 很靈活，但是相對的，也很容易寫出很糟糕的代碼，天花板很高，但是樓地板也很低...

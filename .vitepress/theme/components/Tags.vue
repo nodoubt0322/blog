@@ -1,7 +1,7 @@
 <template>
     <div class="tags">
         <span @click="toggleTag(key)" v-for="(item, key) in data" class="tag">
-            {{ key }} <strong>{{data[key].length}}</strong>
+            {{ key }} <strong>{{ data[key].length }}</strong>
         </span>
     </div>
     <div class="header">{{ selectTag }}</div>
@@ -15,21 +15,22 @@
 </template>
 <script lang="ts" setup>
 import { computed, ref, onMounted } from 'vue'
-import { useData,withBase } from 'vitepress'
+import { useData, withBase } from 'vitepress'
 import { initTags } from '../functions'
 
 const { theme } = useData()
-const data = computed(() => initTags(theme.value.posts))
+const data = computed(() => {
+    console.log(initTags(theme.value.posts))
+    return initTags(theme.value.posts)
+})
 let selectTag = ref('')
 const toggleTag = (tag: string) => {
     selectTag.value = tag
 }
-onMounted(()=>{
-    const firstKey = Object.keys(data.value)[0];
+onMounted(() => {
+    const firstKey = Object.keys(data.value)[0]
     toggleTag(firstKey)
 })
-
-
 </script>
 
 <style scoped>
@@ -50,7 +51,9 @@ onMounted(()=>{
     color: var(--c-brand);
     cursor: pointer;
 }
-.tag strong {color:#222}
+.tag strong {
+    color: #222;
+}
 .header {
     font-size: 2rem;
     font-weight: 600;
