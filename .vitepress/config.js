@@ -6,7 +6,7 @@ injectSpeedInsights()
 inject()
 
 async function config() {
-    const pageSize = 6
+    const pageSize = 10
     await generatePaginationPages(pageSize)
     return {
         title: '學習隨記',
