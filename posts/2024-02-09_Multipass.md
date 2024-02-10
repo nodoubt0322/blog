@@ -106,4 +106,14 @@ multipass purge          # 把所有標注刪除的instance真的刪除
 
 蠻意外的，他居然有 `portainer` 跟 `minikube`
 
+### multipass shell
+
+`multipass shell vm`其實相當於以下的指令
+
+key 放在`/var/root/Library/Application\ Support/multipassd/ssh-keys/id_rsa`裡面
+
+```bash
+sudo ssh  -i /var/root/Library/Application\ Support/multipassd/ssh-keys/id_rsa ubuntu@192.168.205.9
+```
+
 <Comment />

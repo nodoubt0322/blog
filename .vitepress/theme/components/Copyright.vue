@@ -2,7 +2,7 @@
     <div class="site-footer">
         MIT Licensed | Copyright © 2022 <a class="vitepress">nodoubt0322</a><br />
         Powered by
-        <a class="vitepress" target="_blank" href="//vitepress.vuejs.org/">VitePress</a>
+        <a href="https://vitepress.dev/" class="vitepress" target="_blank">VitePress</a>
     </div>
 </template>
 <script lang="ts" setup>
