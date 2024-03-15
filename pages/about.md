@@ -1,7 +1,7 @@
 ---
 page: true
 title: About
-description: About me test
+description: About
 sidebar: false
 ---
 

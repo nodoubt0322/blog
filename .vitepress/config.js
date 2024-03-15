@@ -25,6 +25,8 @@ async function config() {
                 { text: 'Home', link: '/' },
                 { text: 'Archives', link: '/pages/archives' },
                 { text: 'Tags', link: '/pages/tags' },
+                { text: 'Tools', link: '/pages/tools' },
+                { text: 'Books', link: '/pages/books' },
                 { text: 'About', link: '/pages/about' }
             ]
         },
