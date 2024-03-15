@@ -3,7 +3,7 @@ date: 2024-02-29
 title: 淺拷貝(shallow clone)與深拷貝(deep clone)詳解
 tags:
     - Architecture
-description: 在刷極客時間的消息隊列高手課課程，裏面有一個章節主題：學習開源代碼該如何入手，有提到一些論點，覺得不錯，記錄一下...
+description: 盡可能的紀錄深拷貝所有細節的一篇文章...
 ---
 
 # 淺拷貝與深拷貝詳解
