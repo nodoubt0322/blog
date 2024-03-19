@@ -25,13 +25,21 @@ JavaScript 的資料型別可分為 `6` 種 `Primitive Type` 跟一個 `Object`
 
 Function、Array 等等原型鏈底層其實都是 `Object`
 
-Primitive Type 除了`null`跟`undefined`，其他外層都還會再包裝一個一層`Object wrapper`
+Primitive Type 除了`null`跟`undefined`
+
+其他的調用方法時，外層都還會再包裝一層`Object wrapper`
+
+`調用過後`，包裝的實例會`自動銷毀`
 
 ![object wrapper](../images/2024-03-19_type/01.png)
 
-如上圖，數字 1 的 prototype 的 prototype 是`Object`
+```js
+const str = 'hello'
+console.log(str.length) // 5
 
-就是像`String`、`Number`都會有一些`Method`可以使用
+str.a = '123'
+console.log(str.a) // undefined
+```
 
 ## typeof
 
