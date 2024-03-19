@@ -20,7 +20,6 @@ import { initTags } from '../functions'
 
 const { theme } = useData()
 const data = computed(() => {
-    console.log(initTags(theme.value.posts))
     return initTags(theme.value.posts)
 })
 let selectTag = ref('')

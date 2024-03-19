@@ -10,6 +10,9 @@ sidebar: true
 -   [visual copilot](https://www.builder.io/m/design-to-code) (design to code by builder.io)
 -   [roadmap ai](https://roadmap.sh/ai) (generate roadmap with keywords by AI)
 -   [supermaven](https://supermaven.com/) (coding assistant)
+-   [樱桃茶·智域 GPT](https://new.cherrychat.org/home)
+-   [dify](https://dify.ai/) (The Innovation Engine for Generative AI Applications)
+-   [ComfyUI](https://github.com/ZHO-ZHO-ZHO/ComfyUI-Workflows-ZHO) (ComfyUI workflows collection)
 
 ## blog
 
@@ -19,6 +22,8 @@ sidebar: true
 -   [重新理解 Web](https://zhuanlan.zhihu.com/p/581977751)
 -   [what antfu use](https://github.com/antfu/use)
 -   [Oauth2 simple illustration](https://darutk.medium.com/the-simplest-guide-to-oauth-2-0-8c71bd9a15bb)
+-   [planka](https://github.com/plankanban/planka) (open source kanban board with backend)
+-   [websockets-sse-polling-webrtc-webtransport](https://rxdb.info/articles/websockets-sse-polling-webrtc-webtransport.html)
 
 ## javascript
 
