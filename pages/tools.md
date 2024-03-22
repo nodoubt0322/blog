@@ -13,6 +13,7 @@ sidebar: true
 -   [樱桃茶·智域 GPT](https://new.cherrychat.org/home)
 -   [dify](https://dify.ai/) (The Innovation Engine for Generative AI Applications)
 -   [ComfyUI](https://github.com/ZHO-ZHO-ZHO/ComfyUI-Workflows-ZHO) (ComfyUI workflows collection)
+-   [popwebtools](https://www.popwebtools.com/) (Discover The Latest AI Tools, Services And Resources)
 
 ## blog
 
@@ -98,3 +99,5 @@ sidebar: true
 -   [passkeys](https://www.passkeys.com/guides) (new standard to authenticate)
 -   [vscode snippet generator](https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode)
 -   [api insights](https://apiinsights.io/) (Get OpenAPI Spec Insights)
+-   [capnproto](https://capnproto.org/) (better than protobuf?)
+-   [sampler](https://github.com/sqshq/sampler/) (shell commands execution, visualization and alerting)
