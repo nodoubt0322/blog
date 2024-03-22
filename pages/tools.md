@@ -60,6 +60,10 @@ sidebar: true
 -   [sshx](https://sshx.io/) (secure web-based, collaborative terminal)
 -   [CoTerm](https://www.datadoghq.com/blog/introducing-coterm/) (collaborative terminal for pair programming and debugging)
 
+## CICD
+
+-   [codemagic](https://codemagic.io/) (CI/CD for mobile dev teams)
+
 ## 測試
 
 -   [browsercat](https://www.browsercat.com/) (host headless browsers for playwright testing)
@@ -87,6 +91,13 @@ sidebar: true
 ## git
 
 -   [Git Hidden Gems](https://www.youtube.com/watch?v=uFrPgUjv_Y8)
+
+## cheatsheet
+
+-   [awesome-cheatsheets](https://lecoupa.github.io/awesome-cheatsheets/)
+-   [devhints](https://devhints.io/)
+-   [grid cheatsheet](https://grid.malven.co/)
+-   [flexbox](https://flexbox.malven.co/)
 
 ## 其他
 

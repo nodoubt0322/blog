@@ -17,3 +17,7 @@ sidebar: true
 ## system design
 
 -   [patterns-distributed](https://martinfowler.com/books/patterns-distributed.html)
+
+## 商業
+
+-   [商業破局](https://www.books.com.tw/products/CN11930404)
