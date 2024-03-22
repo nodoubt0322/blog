@@ -74,7 +74,7 @@ description: Vercel CTO，前google search總裁解密Core Web Vital如何影響
 
 在`2.5秒`內認為是`良好`，大於`4.0`秒，會被歸類為`糟糕`的使用者體驗
 
-![LCP](../images/2024-02-10_CoreWebVital_SEO/01.svg)
+![LCP](../../images/2024-02-10_CoreWebVital_SEO/01.svg)
 
 ### INP
 
@@ -88,7 +88,7 @@ description: Vercel CTO，前google search總裁解密Core Web Vital如何影響
 -   輕觸`觸碰螢幕`裝置
 -   實體或螢幕`鍵盤`輸入
 
-![INP](../images/2024-02-10_CoreWebVital_SEO/02.svg)
+![INP](../../images/2024-02-10_CoreWebVital_SEO/02.svg)
 
 在`200毫秒`內認為是`良好`，大於`500毫秒`，會被歸類為`糟糕`的使用者體驗
 

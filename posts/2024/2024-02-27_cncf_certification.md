@@ -50,7 +50,7 @@ AWS 證照等級分三種
 -   `Associate`
 -   `Professional`
 
-![aws](../images/2024-02-27_certification/01.jpg)
+![aws](../../images/2024-02-27_certification/01.jpg)
 
 AWS 考證過了，都會給`50%折價券`去考下一個證照
 

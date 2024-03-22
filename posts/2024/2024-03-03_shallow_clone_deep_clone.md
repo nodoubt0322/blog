@@ -73,7 +73,7 @@ value 有改變的，以下做個統整
     -   Int8Array、Int16Array、Int32Array、Uint8Array、Uint16Array、Uint32Array 等等
     -   JSON.stringify(new Int8Array([1])) 都會變成`'{"0":1}'`
 
-![clone](../images/2024-03-03_clone/01.png)
+![clone](../../images/2024-03-03_clone/01.png)
 
 還蠻多雷的其實
 
@@ -106,7 +106,7 @@ structuredClone 前身是`Structured cloning`演算法
 
 詳細可以看[MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types)
 
-![structuredClone](../images/2024-03-03_clone/02.png)
+![structuredClone](../../images/2024-03-03_clone/02.png)
 
 `getter/setter` 在 在 `vue` 的情境下還蠻常碰到的
 

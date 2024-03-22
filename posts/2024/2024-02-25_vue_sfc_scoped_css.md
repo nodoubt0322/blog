@@ -73,7 +73,7 @@ function hash(text: string): string {
 
 經過 webpack 會 compile 成如下圖
 
-![scoped css](../images/2024-02-25_scoped_css/01.png)
+![scoped css](../../images/2024-02-25_scoped_css/01.png)
 
 `屬性selector`會被掛在`最裡面`的`class`，也就是`.el-input`那邊
 
@@ -103,13 +103,13 @@ function hash(text: string): string {
 
 編譯出來的結果如下
 
-![:deep](../images/2024-02-25_scoped_css/02.png)
+![:deep](../../images/2024-02-25_scoped_css/02.png)
 
 那假如把`:deep()`掛在`.container1`會變成怎樣
 
 就再往外一層，如下圖
 
-![:deep](../images/2024-02-25_scoped_css/03.png)
+![:deep](../../images/2024-02-25_scoped_css/03.png)
 
 了解 scoped css 產生的 attribute 掛的位置機制，問題就很容易分析理解了
 

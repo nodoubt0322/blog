@@ -30,7 +30,7 @@ package.json
 
 在 terminal 輸入`echo $PATH & npm run echo`，他會印出 PATH 的環境變量跟在 npm run-script 裡面的環境變量，如圖
 
-![環境變量](../images/2022-04-22/01.png)
+![環境變量](../../images/2022-04-22/01.png)
 
 你會發現多了好幾個 xxx/xxx/node_modules/.bin 的東西，這些環境變量就是在執行 npm run-script 的時候加上去的，執行完之後又移除。
 
@@ -44,7 +44,7 @@ package.json
 
 使用 `bunx或是npx` <包名稱>，會先找./node_modules/.bin 裡面的檔案，可以透過這樣的方式去執行專案裡面安裝的套件
 
-![link](../images/2022-04-22/02.jpg)
+![link](../../images/2022-04-22/02.jpg)
 
 ```json
 "scripts": {

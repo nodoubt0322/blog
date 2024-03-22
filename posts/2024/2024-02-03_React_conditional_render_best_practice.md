@@ -29,7 +29,7 @@ Javascript 中的 `falsy value` 有六種：
 
 falsy value 在 React 中的行為，廢話不多說，直接上代碼。
 
-![falsy value](../images/2024-02-03_React_conditional/01.png)
+![falsy value](../../images/2024-02-03_React_conditional/01.png)
 
 可以看到，除了`0`跟`NaN`，其他 4 種都不會被渲染出來，這很重要，尤其是`0`，很常遇到，而且會衍生另外一個問題．
 

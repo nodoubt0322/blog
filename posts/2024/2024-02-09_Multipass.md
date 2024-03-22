@@ -73,13 +73,13 @@ multipass launch --name vm --cpus 2 --memory 8G --disk 4G
 
 輸入`multipass info vm`，可以看名叫 vm 的詳細資訊
 
-![vm info](../images/2024-02-09_mutipass/01.png)
+![vm info](../../images/2024-02-09_mutipass/01.png)
 
 輸入`multipass shell vm`，可以進到名叫`vm`的 instance 裡面操作
 
 輸入`exit`就可以離開
 
-![multipass shell](../images/2024-02-09_mutipass/02.png)
+![multipass shell](../../images/2024-02-09_mutipass/02.png)
 
 ### 常用指令
 

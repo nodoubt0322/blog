@@ -29,7 +29,7 @@ ids.forEach(async (id) => {
 ```
 
 forEach 的 network waterfall 圖
-![foreach](../images/2022-05-12/01.png)
+![foreach](../../images/2022-05-12/01.png)
 
 -   而且因為每次請求所花的時間會稍微不一樣，所以完成的順序也可能不固定
 
@@ -43,7 +43,7 @@ ids.map(async (id) => {
 ```
 
 map 的 network waterfall 圖
-![foreach](../images/2022-05-12/04.png)
+![foreach](../../images/2022-05-12/04.png)
 
 -   行為跟 forEach 一樣
 
@@ -57,7 +57,7 @@ ids.reduce(async (acc, id) => {
 ```
 
 reduce 的 network waterfall 圖
-![foreach](../images/2022-05-12/06.png)
+![foreach](../../images/2022-05-12/06.png)
 
 -   行為跟 forEach 一樣
 
@@ -74,7 +74,7 @@ fetchData()
 ```
 
 for of 的 network waterfall 圖
-![foreach](../images/2022-05-12/02.png)
+![foreach](../../images/2022-05-12/02.png)
 
 -   他會等前面一個執行完，才會執行下一個
 
@@ -91,7 +91,7 @@ fetchData()
 ```
 
 for loop 的 network waterfall 圖
-![foreach](../images/2022-05-12/03.png)
+![foreach](../../images/2022-05-12/03.png)
 
 -   跟 for in 一樣，他會等前面一個執行完，才會執行下一個
 
@@ -110,6 +110,6 @@ fetchData()
 ```
 
 while loop 的 network waterfall 圖
-![foreach](../images/2022-05-12/05.png)
+![foreach](../../images/2022-05-12/05.png)
 
 <Comment />

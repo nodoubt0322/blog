@@ -42,7 +42,7 @@ export default function App() {
 
 結果顯示
 
-![className](../images/2024-02-04_className/01.png)
+![className](../../images/2024-02-04_className/01.png)
 
 -   使用邏輯操作符`&&`，除了`空字串`，其他 false value 都被打印出來了，這肯定不是我們要的
 -   使用`三元操作符`，讓判斷式為`false`時，回傳`空字串`，就能符合我們的預期。
@@ -101,7 +101,7 @@ function classNames() {
 ```
 
 結果
-![result](../images/2024-02-04_className/02.png)
+![result](../../images/2024-02-04_className/02.png)
 
 我們來看一下 classNames 是怎麼實現的
 

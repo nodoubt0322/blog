@@ -31,7 +31,7 @@ Primitive Type 除了`null`跟`undefined`
 
 `調用過後`，包裝的實例會`自動銷毀`
 
-![object wrapper](../images/2024-03-19_type/01.png)
+![object wrapper](../../images/2024-03-19_type/01.png)
 
 ```js
 const str = 'hello'
@@ -47,7 +47,7 @@ console.log(str.a) // undefined
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#primitive_values)有個 primitive value 用 typeof 回傳的值的表
 
-![typeof](../images/2024-03-19_type/02.png)
+![typeof](../../images/2024-03-19_type/02.png)
 
 除了`null`之外，其他的 primitive value 都如預期
 
