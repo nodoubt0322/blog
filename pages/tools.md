@@ -55,6 +55,18 @@ sidebar: true
 
 -   [deskree](https://www.deskree.com/) (Create enterprise-grade APIs, Database, AUTH, Integrations and more in minutes)
 
+## database
+
+-   [xata](https://xata.io/) (Xata is the only serverless data platform for PostgreSQL)
+-   [supabase](https://supabase.com/) (firebase alternative)
+
+## serverless
+
+-   [xata](https://xata.io/) (Xata is the only serverless data platform for PostgreSQL)
+-   [fly.io](https://fly.io/)
+-   [vercel](https://vercel.com/)
+-   [supabase](https://supabase.com/) (firebase alternative)
+
 ## k8s
 
 -   [k8sgpt](https://k8sgpt.ai/)
