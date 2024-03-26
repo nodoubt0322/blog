@@ -15,38 +15,45 @@ sidebar: true
 -   [ComfyUI](https://github.com/ZHO-ZHO-ZHO/ComfyUI-Workflows-ZHO) (ComfyUI workflows collection)
 -   [popwebtools](https://www.popwebtools.com/) (Discover The Latest AI Tools, Services And Resources)
 
-## blog
-
--   [json alternative](https://medium.com/data-science-community-srm/json-is-incredibly-slow-heres-what-s-faster-ca35d5aaf9e8)
--   [perfplanet](https://calendar.perfplanet.com/2023/) (performance articles)
--   [2020-2023 js](https://betterprogramming.pub/all-javascript-and-typescript-features-of-the-last-3-years-629c57e73e42)
--   [重新理解 Web](https://zhuanlan.zhihu.com/p/581977751)
--   [what antfu use](https://github.com/antfu/use)
--   [Oauth2 simple illustration](https://darutk.medium.com/the-simplest-guide-to-oauth-2-0-8c71bd9a15bb)
--   [planka](https://github.com/plankanban/planka) (open source kanban board with backend)
--   [websockets-sse-polling-webrtc-webtransport](https://rxdb.info/articles/websockets-sse-polling-webrtc-webtransport.html)
-
 ## javascript
 
 -   [nue.js](https://nuejs.org/) (content-first Web framework)
+-   [zagjs](https://zagjs.com/) (UI components powered by Finite State Machines)
+-   [tempo](https://tempo.formkit.com/) (The easiest way to work with dates in JavaScript)
+-   [auto-animate](https://auto-animate.formkit.com/) (Add motion to your apps with a single line of code)
+-   [arrow-js](https://www.arrow-js.com/) (A tiny ~2kb library for building reactive interfaces in native JavaScript)
 
 ## typescript
 
 -   [type-challenges-solutions](https://ghaiklor.github.io/type-challenges-solutions/en/)
 -   [typehero](https://typehero.dev/aot-2023)
 
+## UI framework
+
+-   [daisyui](https://daisyui.com/) (component library for Tailwind CSS)
+
+## vue
+
+-   [formkit](https://formkit.com/) (The open-source form framework for Vue)
+
 ## CSS
 
 -   [cssbattle](https://cssbattle.dev/) (css leetcode)
+-   [picocss](https://picocss.com/) ()
 
 ## frontend oberserverbility
 
 -   [spotlightjs](https://spotlightjs.com/) (Sentry for Development)
--
+-   [codecov](https://about.codecov.io/) (Code Coverage: More Than a Metric by sentry.io)
+-   [sentry](https://sentry.io/welcome/) (error tracking)
 
 ## 後端
 
 -   [elysiajs](https://elysiajs.com/) (outperform most of the web frameworks available today)
+
+## api
+
+-   [deskree](https://www.deskree.com/) (Create enterprise-grade APIs, Database, AUTH, Integrations and more in minutes)
 
 ## k8s
 
@@ -74,6 +81,8 @@ sidebar: true
 -   [Zero to IDE with LazyVim](https://www.youtube.com/watch?v=N93cTbtLCIM)
 -   [LazyVim](https://www.lazyvim.org/)
 -   [neovide](https://neovide.dev/index.html) (graphical user interface for Neovim)
+-   [preview.yazi](https://github.com/urie96/preview.yazi) (preview 插件)
+-   [yazi](https://github.com/sxyazi/yazi) (Blazing Fast Terminal File Manager)
 
 ## wasm
 
@@ -99,6 +108,10 @@ sidebar: true
 -   [grid cheatsheet](https://grid.malven.co/)
 -   [flexbox](https://flexbox.malven.co/)
 
+## 英文
+
+-   [明星教英语 Benjamin](https://www.youtube.com/@BenjaminSpeak/videos)
+
 ## 其他
 
 -   [web-check](https://web-check.xyz/) (分析網站)
@@ -112,3 +125,4 @@ sidebar: true
 -   [api insights](https://apiinsights.io/) (Get OpenAPI Spec Insights)
 -   [capnproto](https://capnproto.org/) (better than protobuf?)
 -   [sampler](https://github.com/sqshq/sampler/) (shell commands execution, visualization and alerting)
+-   [awesome-vite](https://github.com/vitejs/awesome-vite) (有一堆 template)
