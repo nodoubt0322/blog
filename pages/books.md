@@ -14,9 +14,17 @@ sidebar: true
 -   [Tackling TypeScript: Upgrading from JavaScript](https://exploringjs.com/tackling-ts/)
 -   [Shell scripting with Node.js ](https://exploringjs.com/nodejs-shell-scripting/)
 
+## observability
+
+-   [Observability-in-DevOps](https://github.com/marcustung/Observability-in-DevOps) (marcustung ebook)
+
 ## system design
 
 -   [patterns-distributed](https://martinfowler.com/books/patterns-distributed.html)
+-   [Martin Fowler 的企業級軟體架構模式 (Patterns of Enterprise Application Architecture)](https://www.tenlong.com.tw/products/9786263330504)
+-   [大牛书单 | 缓存系列好书推荐](https://cloud.tencent.com/developer/article/2255687)
+-   [POJOs in Action ](https://www.manning.com/books/pojos-in-action)
+-   [Microservices Patterns: With examples in Java](https://www.tenlong.com.tw/products/9787111624127)
 
 ## 商業
 
