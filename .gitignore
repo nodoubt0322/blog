@@ -5,5 +5,22 @@ dist-ssr
 *.local
 .idea
 pnpm-lock.yaml
+bun.lockb
+
+# VitePress
+.vitepress/dist
+.vitepress/cache
+.vitepress/.temp
+
+# Generated pagination files (except index.md)
+page_*.md
+!page_2.md
+!page_3.md
+
+# Old CommonJS files (replaced by .mjs)
+.vitepress/config.js
+.vitepress/theme/serverUtils.js
+
+# Development files
 smartmontools.md
 zsh_history.md

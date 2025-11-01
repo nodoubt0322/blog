@@ -2,14 +2,17 @@ type Post = {
     frontMatter: {
         date: string
         title: string
-        tags: string[]
-        description: string
+        tags?: string[]
+        description?: string
     }
     regularPath: string
 }
 
-export function initTags(post: Post[]) {
-    const data: any = {}
+type TagsData = Record<string, Post[]>
+type YearSortData = Post[][]
+
+export function initTags(post: Post[]): TagsData {
+    const data: TagsData = {}
     for (let index = 0; index < post.length; index++) {
         const element = post[index]
         const tags = element.frontMatter.tags
@@ -18,8 +21,7 @@ export function initTags(post: Post[]) {
                 if (data[item]) {
                     data[item].push(element)
                 } else {
-                    data[item] = []
-                    data[item].push(element)
+                    data[item] = [element]
                 }
             })
         }
@@ -27,8 +29,8 @@ export function initTags(post: Post[]) {
     return data
 }
 
-export function useYearSort(post: Post[]) {
-    const data = []
+export function useYearSort(post: Post[]): YearSortData {
+    const data: YearSortData = []
     let year = '0'
     let num = -1
     for (let index = 0; index < post.length; index++) {
@@ -39,8 +41,7 @@ export function useYearSort(post: Post[]) {
                 data[num].push(element)
             } else {
                 num++
-                data[num] = [] as any
-                data[num].push(element)
+                data[num] = [element]
                 year = y
             }
         }

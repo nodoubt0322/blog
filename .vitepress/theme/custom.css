@@ -115,7 +115,7 @@ h3 {
     :root {
         --header-height: 5rem !important;
     }
-    .nav-bar-title {
+    .VPNavBarTitle {
         font-size: 2rem !important;
         padding-left: 180px;
         letter-spacing: -1px;
@@ -123,39 +123,45 @@ h3 {
         font-family: Optima, sans-serif !important;
     }
 
-    .nav-links {
+    .VPNav .content-nav .nav-links,
+    .VPNav .nav-links {
         padding-right: 180px !important;
     }
-    .nav-link .item {
+    .nav-link .item,
+    .VPNavBarMenuLink {
         font-weight: 600;
     }
 
-    .page {
+    .page,
+    .VPContent {
         margin-left: 0 !important;
         min-height: calc(100vh - 5rem);
     }
 
-    .sidebar {
+    .sidebar,
+    .VPSidebar {
         left: auto !important;
         right: 1rem !important;
         border-right: none !important;
         padding-top: 4rem !important;
         width: 14rem !important;
     }
-    .sidebar > .sidebar-links {
+    .sidebar > .sidebar-links,
+    .VPSidebar .curtain .content {
         border-left: 1px solid var(--c-divider-light);
     }
-    .sidebar-link-item {
+    .sidebar-link-item,
+    .VPSidebarItem {
         border-left-width: 1px;
         margin-left: -1px;
     }
 }
 
-body.dark .nav-bar {
+.dark .nav-bar {
     border-bottom: none;
 }
 
-body.dark {
+.dark {
     --c-divider: #666;
     --c-divider-light: #333;
     --c-text: var(--c-text-dark-1);
@@ -198,11 +204,11 @@ body.dark {
     --docsearch-footer-shadow: 0 -1px 0 0 #e0e3e8, 0 -3px 6px 0 rgba(69, 98, 155, 0.12);
 }
 
-body.dark tr:nth-child(2n) {
+.dark tr:nth-child(2n) {
     background-color: #2a2a2a;
 }
 
-body.dark .DocSearch {
+.dark .DocSearch {
     --docsearch-primary-color: var(--c-brand);
     --docsearch-highlight-color: var(--docsearch-primary-color);
     --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-primary-color);
@@ -211,70 +217,79 @@ body.dark .DocSearch {
     --docsearch-searchbox-background: #333;
 }
 
-body.dark .DocSearch-Button:hover {
+.dark .DocSearch-Button:hover {
     box-shadow: var(--docsearch-searchbox-shadow);
     color: var(--docsearch-text-color);
     outline: none;
 }
 
-body.dark .custom-block.details,
-body.dark .custom-block.info,
-body.dark .custom-block.tip {
+.dark .custom-block.details,
+.dark .custom-block.info,
+.dark .custom-block.tip {
     background-color: #2f2f2f;
 }
 
-body.dark .custom-block.warning {
+.dark .custom-block.warning {
     background-color: #ffe56436;
     color: #ccc18c;
 }
 
-body.dark .custom-block.danger {
+.dark .custom-block.danger {
     background-color: #6e4f4fd2;
     color: #f5d3d3;
 }
 
-body.dark .custom-block.danger .custom-block-title {
+.dark .custom-block.danger .custom-block-title {
     color: #f6b9b9;
 }
 
-body.dark .describe {
+.dark .describe {
     color: #fff;
 }
 
-body.dark .tag {
+.dark .tag {
     color: #35a69b;
     border: 1px solid #35a69b;
     background-color: transparent;
 }
 
-body.dark .token.tag {
+.dark .token.tag {
     border: none;
 }
 
-body.dark .tag strong {
+.dark .tag strong {
     color: #5aa1c3;
 }
 
-body.dark code {
+.dark code {
     color: #cf9999;
 }
 
-body.dark iframe .text-link {
+.dark iframe .text-link {
     color: #fff;
 }
 
-body.dark h2 {
+.dark h2 {
     color: #bcb137;
 }
 
-body.dark h3 {
+.dark h3 {
     color: #8ebc6e;
 }
 
-body.dark h4 {
+.dark h4 {
     color: #3eaf7c;
 }
 
-body.dark .vitepress {
+.dark .vitepress {
     color: #3eaf7c;
+}
+
+/* Document links styling */
+.vp-doc a {
+    color: #3eaf7c;
+}
+
+.vp-doc a:hover {
+    color: #4abf8a;
 }

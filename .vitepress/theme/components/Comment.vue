@@ -1,12 +1,16 @@
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 import { useData } from 'vitepress'
-const { theme } = useData()
+const { theme, isDark } = useData()
 const { repo, issueTerm = 'pathname' } = theme.value.comment
 const utterancesRef = ref()
-onMounted(() => {
+
+const createUtterances = () => {
     if (repo && typeof window !== 'undefined') {
-        const themes = document.body.classList.contains('dark') ? 'github-dark' : 'github-light'
+        // Clear existing utterances
+        utterancesRef.value.innerHTML = ''
+
+        const themes = isDark.value ? 'github-dark' : 'github-light'
         let utterances = document.createElement('script')
         utterances.async = true
         utterances.setAttribute('src', 'https://utteranc.es/client.js')
@@ -16,6 +20,15 @@ onMounted(() => {
         utterances.setAttribute('crossorigin', 'anonymous')
         utterancesRef.value.appendChild(utterances)
     }
+}
+
+onMounted(() => {
+    createUtterances()
+})
+
+// Watch for dark mode changes and reload utterances
+watch(isDark, () => {
+    createUtterances()
 })
 </script>
 

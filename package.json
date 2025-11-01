@@ -7,30 +7,31 @@
         "dev": "vitepress dev --host 0.0.0.0",
         "deploy": "./deploy.sh && npm run preview",
         "build": "vitepress build",
-        "preview": "open https://nodoubt0322.github.io/blog/"
+        "preview": "open https://nodoubt0322.github.io/blog/",
+        "lint": "eslint .",
+        "format": "prettier --write ."
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "@types/node": "^16.11.12",
-        "@typescript-eslint/eslint-plugin": "^5.6.0",
-        "@typescript-eslint/parser": "^5.6.0",
-        "@typescript-eslint/types": "^5.6.0",
-        "@vue/compiler-sfc": "^3.2.24",
-        "eslint": "^8.4.1",
-        "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-prettier": "^4.0.0",
-        "eslint-plugin-vue": "^8.2.0",
-        "fs-extra": "^10.0.0",
-        "globby": "^11.0.4",
+        "@types/node": "^20.17.0",
+        "@vue/compiler-sfc": "^3.5.13",
+        "eslint": "^9.17.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-vue": "^9.31.0",
+        "fs-extra": "^11.2.0",
+        "globby": "^14.0.2",
         "gray-matter": "^4.0.3",
-        "prettier": "^2.5.1",
-        "typescript": "^4.5.2",
-        "vitepress": "^0.20.4"
+        "prettier": "^3.4.2",
+        "typescript": "^5.9.0",
+        "typescript-eslint": "^8.18.0",
+        "vitepress": "^1.6.4",
+        "vue-eslint-parser": "^10.2.0"
     },
     "dependencies": {
-        "@vercel/analytics": "^1.1.2",
-        "@vercel/speed-insights": "^1.0.9"
+        "@vercel/analytics": "^1.4.1",
+        "@vercel/speed-insights": "^1.1.0"
     }
 }

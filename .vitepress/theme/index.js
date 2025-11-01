@@ -16,5 +16,11 @@ export default {
         app.component('Archives', Archives)
         app.component('Page', Page)
         app.component('Comment', Comment)
+
+        // Inject analytics only on client side
+        if (typeof window !== 'undefined') {
+            import('@vercel/analytics').then(({ inject }) => inject())
+            import('@vercel/speed-insights').then(({ injectSpeedInsights }) => injectSpeedInsights())
+        }
     }
 }

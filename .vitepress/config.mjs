@@ -1,16 +1,14 @@
-const { getPosts, generatePaginationPages } = require('./theme/serverUtils')
-import { inject } from '@vercel/analytics'
-import { injectSpeedInsights } from '@vercel/speed-insights'
+import { defineConfig } from 'vitepress'
+import { getPosts, generatePaginationPages } from './theme/serverUtils.mjs'
 
-injectSpeedInsights()
-inject()
-
-async function config() {
+export default await defineConfig(async () => {
     const pageSize = 10
     await generatePaginationPages(pageSize)
+
     return {
         title: '學習隨記',
         base: '/',
+        appearance: 'dark',
         description: 'vitepress,blog',
         head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
         themeConfig: {
@@ -30,6 +28,4 @@ async function config() {
         },
         srcExclude: ['README.md']
     }
-}
-
-module.exports = config()
+})
