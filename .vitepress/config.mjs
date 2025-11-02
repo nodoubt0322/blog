@@ -24,7 +24,11 @@ export default await defineConfig(async () => {
                 { text: 'Archives', link: '/pages/archives' },
                 { text: 'Tags', link: '/pages/tags' },
                 { text: 'About', link: '/pages/about' }
-            ]
+            ],
+            outline: {
+                level: [2, 3, 4],
+                label: ''
+            }
         },
         srcExclude: ['README.md']
     }

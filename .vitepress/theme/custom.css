@@ -293,3 +293,10 @@ h3 {
 .vp-doc a:hover {
     color: #4abf8a;
 }
+
+/* Hide "On this page" title in outline */
+.VPDocAsideOutline .VPDocOutlineTitle,
+.vp-doc .aside .outline-title,
+.outline-title {
+    display: none !important;
+}
