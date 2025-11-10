@@ -130,7 +130,7 @@ STT的model真的很便宜，所以花錢去訂閱的感覺都是潘仔
 - 似乎有bug，都設定好了，用一用又突然不能用。不是很穩定的感覺
 
 
-### [代碼](https://daiti.ai/)
+### [代體](https://daiti.ai/)
 
 `支援Mac、ios、windows`
 
