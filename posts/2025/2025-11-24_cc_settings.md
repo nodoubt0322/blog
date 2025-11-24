@@ -1,6 +1,6 @@
 ---
 title: claude code的settings
-date: 2025-11-21
+date: 2025-11-24
 tags:
     - Claude Code
     - AI
@@ -100,14 +100,26 @@ claude code的設定蠻多的，而且有很多重要的東西在裡面，做個
     - `優先級最高`，會蓋掉下面細分的model
   - `plan`, `subagent`, `background`等細分的model要填`full model name`，這邊[查閱](https://platform.claude.com/docs/en/about-claude/models/overview#model-names)
 - `bash設定`
+  - `CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR`: "1"
+    - 會在執行bash指令之後，回到working dir，蠻重要的，不然AI有時會迷路
 - `Claude Code 核心設定`
+  - `DISABLE_BUG_COMMAND`、`DISABLE_ERROR_REPORTING`、`DISABLE_TELEMETRY`都是官方debug的監控，可以關掉
+  - `CLAUDE_CODE_MAX_OUTPUT_TOKENS`最大值是`32000`(從github issue推測得知)
+  - `DISABLE_NON_ESSENTIAL_MODEL_CALLS`，跟一些體驗相關的，可以不用關，設成`"0"`
 - `網路設定`
+  - 這邊的proxy通常是為了監控、過濾、audit
 - `MCP設定`
+  - `MAX_MCP_OUTPUT_TOKENS`最大值就是`25000`，沒設定就是`最大值`
 - `效能與優化設定`
-
-
-
-
+  - `MAX_THINKING_TOKENS`:"64000"
+    - 預設是`關閉`的，但是可以透過`ultrathink`等觸發詞去臨時啟動
+    - 最大值是`64000`
+    - `ultrathinkn`的預算是`32000`，ultrathink是一個`觸發詞`
+    - 可以明確指定`extended thinking`，然後使用`64000`token
+    - 或是在system prompt設定一個`觸發詞`，例如：`deepthinking`去觸發`64000`token的`extended thinking`
+    - `extended thinking`是`ultrathink`、`think hard`、`think harder`的統稱
+  - `USE_BUILTIN_RIPGREP`:"1"
+    - 預設值是1，使用`claude code`的`RIPGREP`
 
 ```json
 {
@@ -175,8 +187,8 @@ claude code的設定蠻多的，而且有很多重要的東西在裡面，做個
     "CLAUDE_CODE_DISABLE_TERMINAL_TITLE": "1",
     // 跳過 IDE 擴充功能的自動安裝，預設為0(開啟)
     "CLAUDE_CODE_IDE_SKIP_AUTO_INSTALL": "1",
-    // 設定大多數請求的最大輸出 token 數量
-    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "2048",
+    // 設定該次請求的最大輸出 token 數量，不要設定
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "32000",
     // 設為 '1' 以停用成本警告訊息
     "DISABLE_COST_WARNINGS": "1",
     // 設為 '1' 以停用非關鍵路徑的模型呼叫 (如風格文字)
@@ -196,7 +208,7 @@ claude code的設定蠻多的，而且有很多重要的東西在裡面，做個
     "HTTP_PROXY": "http://proxy.example.com:8080",
     // 指定網路連線的 HTTPS 代理伺服器
     "HTTPS_PROXY": "https://proxy.example.com:8080",
-    // 直接發出請求的網域和 IP 清單，繞過代理伺服器
+    // 不經過proxy的domain list
     "NO_PROXY": "localhost,127.0.0.1",
 
     /** ========== MCP設定 ========== */
@@ -212,25 +224,84 @@ claude code的設定蠻多的，而且有很多重要的東西在裡面，做個
 
     // 啟用擴展思考並設定思考過程的 token 預算
     // 擴展思考可提升複雜推理和編碼任務的效能，但會影響提示快取效率，預設停用
-    "MAX_THINKING_TOKENS": "8192",
+    "MAX_THINKING_TOKENS": "64000",
     // SlashCommand 工具顯示的斜線指令元資料最大字元數 (預設: 15000)
     "SLASH_COMMAND_TOOL_CHAR_BUDGET": "15000",
-    // 設為 '0' 以使用系統安裝的 rg 而非 Claude Code 內建的 rg
+    // 設為 '0' 以使用系統安裝的 rg 而非 Claude Code 內建的 rg，預設值1
     "USE_BUILTIN_RIPGREP": "1",
   }
 }
-
-
 ```
+---
+
+### 權限設定
+
+分成：
+- allow
+- ask
+- deny
+- additionalDirectories
+  - 可以在cc使用`/add-dir`去臨時新增
+- defaultMode
+  - `default`
+    - 首次使用每個工具時會`提示授權`
+  - `acceptEdits`
+    - 自動接受該會話的`檔案編輯`權限
+    - `讀取`、`bash`、`工具`、`網路`都需要確認
+  - `plan`
+    - 可以`分析檔案`，但無法`修改檔案`或`執行指令`
+    - plan mode預設會掃`整個專案結構`，確保正確性，bypassPermissions不會
+    - 跟專案相關且複雜的任務，可以先用plan mode去做規劃，產生prd
+  - `bypassPermissions`
+    - 跳過所有許可提示
+- disableBypassPermissionsMode
+  - 預設值是允許上面的`bypassPermissions`
+  - 設成"disableBypassPermissionsMode":"disable"，就不能切換到`bypassPermissions` mode
+    - `shift + tab`可以切換mode
 
 
-### outputStyle
 
-內建三種可以選，預設是Default，也可以`自定義`
+```json
+{
+  "permissions": {
+    // 允許的權限規則陣列
+    "allow": [ "Bash(git diff:*)" ],
+    // 需要確認的權限規則陣列
+    "ask": [ "Bash(git push:*)" ],
+    // 拒絕的權限規則陣列
+    "deny": [ "WebFetch", "Bash(curl:*)", "Read(./.env)", "Read(./secrets/**)" ],
+    // 額外的工作目錄
+    "additionalDirectories": [
+      "/path/to/another/project",
+      "/shared/workspace"
+    ],
+    // 有`default`、`acceptEdits`、`plan`、`bypassPermissions`
+    "defaultMode": "bypassPermissions",
+    // 禁止bypassPermissions mode, 沒射就是允許
+    "disableBypassPermissionsMode": "disable"
+  },
+}
+```
+---
+
+### hooks設定
+
+[官方文件在這](https://code.claude.com/docs/en/hooks)，超長，還沒找到很好地應用，以後有心得，會再寫一篇blog
+
+---
+### statusLine設定
+
+可以利用`/statusline`去幫忙產生，或是直接用社群的工具，像[ccstatusline](https://github.com/sirmalloc/ccstatusline)
+
+---
+### outputStyle設定
+
+內建三種可以選，預設是Default，也可以`自定義`，在CC中使用`/output-style`去切換
 - `Default`
   - 標準的`軟體工程任務`模式 
 - `Explanatory`
   - 提供`教育性見解`，幫助`理解`實現選擇和程式碼庫模式
+  - 日常可以用這個
 - `Learning`
   - `協作學習模式`，Claude 會分享見解並要求你貢獻程式碼片段
 
@@ -254,112 +325,62 @@ tasks. [Your custom instructions here...]
 [Define how the assistant should behave in this style...]
 
 ```
-
-
 ---
 
-### 權限設定
-
-```json
-{
-  "permissions": {
-    // 允許的權限規則陣列
-    "allow": [
-      {
-        "tool": "bash",
-        "command": "git *",
-        "description": "允許所有 git 命令"
-      },
-      {
-        "tool": "write",
-        "path": "src/**/*",
-        "description": "允許寫入 src 目錄下的所有檔案"
-      }
-    ],
-
-    // 需要確認的權限規則陣列
-    "ask": [
-      {
-        "tool": "bash",
-        "command": "rm *",
-        "description": "刪除檔案需要確認"
-      },
-      {
-        "tool": "write",
-        "path": "package.json",
-        "description": "修改 package.json 需要確認"
-      }
-    ],
-
-    // 拒絕的權限規則陣列
-    "deny": [
-      {
-        "tool": "bash",
-        "command": "sudo *",
-        "description": "拒絕所有 sudo 命令"
-      },
-      {
-        "tool": "bash",
-        "command": "curl * | bash",
-        "description": "拒絕直接執行下載的腳本"
-      }
-    ],
-
-    // 額外的工作目錄
-    "additionalDirectories": [
-      "/path/to/another/project",
-      "/shared/workspace"
-    ],
-
-    // 預設權限模式 ("allow" | "ask" | "deny")
-    "defaultMode": "ask",
-
-    // 防止繞過權限模式
-    "disableBypassPermissionsMode": true
-  },
-}
-```
 ### sandbox設定
+
+大部分都跟權限相關的，理論上不常用
 
 ```json
 {
   "sandbox": {
     // 啟用 bash 沙盒 (預設: false)
     "enabled": true,
-
     // 如果在沙盒中，自動允許 bash (預設: true)
     "autoAllowBashIfSandboxed": true,
-
-    // 沙盒外的命令
-    "excludedCommands": [
-      "git",
-      "npm",
-      "yarn",
-      "node"
-    ],
-
+    // sandbox外可執行的指令
+    "excludedCommands": ["git", "docker"],
     // 允許未沙盒化的命令 (預設: true)
     "allowUnsandboxedCommands": false,
-
     // 網路設定
     "network": {
       // 可存取的 Unix sockets
-      "allowUnixSockets": [
-        "/var/run/docker.sock"
-      ],
-
+      "allowUnixSockets": ["~/.ssh/agent-socket"],
       // 允許綁定本地主機 (預設: false)
       "allowLocalBinding": true,
-
       // 自定義 HTTP 代理埠號
       "httpProxyPort": 8080,
-
       // 自定義 SOCKS5 代理埠號
-      "socksProxyPort": 1080
+      "socksProxyPort": 8081,
+      // 啟用較弱的沙盒以支援非特權的 Docker 環境, 預設false
+      "enableWeakerNestedSandbox":true
     }
   },
 }
 ```
+
+## 推薦的設定值
+
+推薦的設定值如下
+
+```json
+{
+  "includeCoAuthoredBy": false,
+  "env": {
+    "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR": "1",
+    "DISABLE_BUG_COMMAND": "1",
+    "DISABLE_ERROR_REPORTING": "1",
+    "DISABLE_TELEMETRY": "1",
+    "MAX_THINKING_TOKENS": "64000",
+  },
+  "permissions": {
+    "defaultMode": "bypassPermissions",
+  },
+  "outputStyle": "Explanatory",
+}
+
+```
+
 
 
 
