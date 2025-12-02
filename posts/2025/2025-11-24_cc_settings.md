@@ -371,7 +371,7 @@ tasks. [Your custom instructions here...]
     "DISABLE_BUG_COMMAND": "1",
     "DISABLE_ERROR_REPORTING": "1",
     "DISABLE_TELEMETRY": "1",
-    "MAX_THINKING_TOKENS": "64000",
+    "MAX_THINKING_TOKENS": "64000"
   },
   "permissions": {
     "defaultMode": "bypassPermissions",
